@@ -6,6 +6,8 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import React, { use } from "react";
 
+export const dynamic = "force-dynamic";
+
 async function getUserData() {
   try {
     return await fetch(process.env.NEXT_PUBLIC_CLIENT_URL + "/api/profile", {
