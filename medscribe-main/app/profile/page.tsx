@@ -20,10 +20,15 @@ async function getUserData() {
 }
 function ProfilePage() {
   const profile = use(getUserData());
+  const profileData = profile?.data ?? {};
   const {
-    MEDICAL_HISTORY,
+    MEDICAL_HISTORY = { total: 0, documents: [] },
     PROFILE,
-  }: { PROFILE: IProfile; MEDICAL_HISTORY: IMedicalResponse } = profile.data;
+  }: {
+    PROFILE?: IProfile;
+    MEDICAL_HISTORY?: IMedicalResponse;
+  } = profileData;
+
   if (!PROFILE) return redirect("/onboarding");
   return (
     <section className="h-full w-full flex flex-col">

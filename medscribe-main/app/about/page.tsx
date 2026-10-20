@@ -23,26 +23,25 @@ function AboutPage() {
       </section>
       <section className="p-4 md:p-6 space-y-6 max-w-xl mx-auto">
         <p>
-
-        
-      Welcome to app Med Scribe!
- </p>
- <p>
-
- 
-In today's fast-paced healthcare environment, efficient management of patient information is crucial for providing quality care. Med Scribe is designed to streamline the documentation and storage of treatment records, enabling healthcare professionals to access and update patient data with ease. This software not only enhances the accuracy of medical records but also ensures compliance with regulatory standards, improving overall patient safety and care outcomes
-</p>
-<p>
-
-
-Med Scribe enhances the accuracy of medical records and helps to provide treatment fast.
-</p>
-<p>
-
-
-As healthcare becomes increasingly digitized, adopting such innovative solutions is essential for enhancing patient operational
- efficiency.
- </p>
+          Welcome to app Med Scribe!
+        </p>
+        <p>
+          In today&apos;s fast-paced healthcare environment, efficient management
+          of patient information is crucial for providing quality care. Med
+          Scribe is designed to streamline the documentation and storage of
+          treatment records, enabling healthcare professionals to access and
+          update patient data with ease. This software not only enhances the
+          accuracy of medical records but also ensures compliance with regulatory
+          standards, improving overall patient safety and care outcomes.
+        </p>
+        <p>
+          Med Scribe enhances the accuracy of medical records and helps to
+          provide treatment fast.
+        </p>
+        <p>
+          As healthcare becomes increasingly digitized, adopting such innovative
+          solutions is essential for enhancing patient operational efficiency.
+        </p>
       </section>
     </div>
   );

@@ -6,6 +6,8 @@ import { IDiseasesResponse } from "@/types";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
+export const dynamic = "force-dynamic";
+
 async function getDiseases() {
   try {
     const cookie = cookies().toString();

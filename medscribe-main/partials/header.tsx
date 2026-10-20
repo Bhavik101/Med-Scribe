@@ -8,18 +8,24 @@ function Header() {
   useEffect(() => {
     async function getUserData() {
       try {
-        const data = await fetch(
-          process.env.NEXT_PUBLIC_CLIENT_URL + "/api/profile",
-          {
-            credentials: "include",
-          }
-        ).then((data) => data.json());
-        sessionStorage.setItem("user", JSON.stringify(data.data.PROFILE));
+        const response = await fetch("/api/profile", {
+          credentials: "include",
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          return;
+        }
+
+        const data = await response.json();
+        if (data?.data?.PROFILE) {
+          sessionStorage.setItem("user", JSON.stringify(data.data.PROFILE));
+        }
       } catch (error) {
         console.log(error);
-        return { error };
       }
     }
+
     getUserData();
   }, []);
   return (
